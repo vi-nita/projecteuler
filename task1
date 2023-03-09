@@ -1,1 +1,42 @@
+#qn1
+sum = 0
+for i in range(1, 1000):
+    if i % 3 == 0 or i % 5 == 0:
+        sum += i
+print(sum)
 
+#qn2
+# initialize variables
+a = 1
+b = 2
+sum_even = 2 # start with 2 as the second term is even
+
+# loop until the next term exceeds 4 million
+while b <= 4000000:
+    # calculate the next term in the sequence
+    c = a + b
+    
+    # update variables
+    a = b
+    b = c
+    
+    # add even terms to sum_even
+    if c % 2 == 0:
+        sum_even += c
+        
+# print the result
+print("The sum of even-valued terms in the Fibonacci sequence that do not exceed 4 million is:", sum
+
+#qn3
+def largest_prime_factor(n):
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+    return n
+
+number = 600851475143
+largest_factor = largest_prime_factor(number)
+print(largest_factor)
